@@ -1,14 +1,11 @@
 const requestHandling = require('../utils/requestHandling');
+const stockInfoService = require('../services/StockInfoService');
 
 class StockInfoController {
     async getStockInfo (req, res, param) {
-        try {
-            
-            const harCodeData = {
-                hello: param
-            }
-
-            return requestHandling.success(res, harCodeData);
+        try {            
+            const result = await stockInfoService.getStockInfo(param);
+            return requestHandling.success(res, result);
         }
         catch (error) {
             return requestHandling.error(res, error);
