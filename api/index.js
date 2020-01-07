@@ -17,7 +17,5 @@ module.exports.get = function get(url){
             reject({ error: err.message });
         });
     });
-
-
 }
 
