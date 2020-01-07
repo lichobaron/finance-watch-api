@@ -3,5 +3,5 @@ module.exports.getLogo = function getLogo(logo){
 }
 
 module.exports.getNews = function getNews(news){
-    return news[0];
+    return news[0].url;
 }

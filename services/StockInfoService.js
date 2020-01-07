@@ -1,6 +1,7 @@
 const api = require('../api');
 const urls = require('../constants/api');
 const stockInfoSelectors = require('../selectors/stockInfo');
+const getError = require('../selectors/error').getError;
 
 class StockInfoService {
     async getStockInfo (symbol) {
@@ -13,6 +14,21 @@ class StockInfoService {
             logo: stockInfoSelectors.getLogo(logo), 
             news: stockInfoSelectors.getNews(news),
         }
+    }
+
+    isStockInfoValid(stockInfo){
+        let valid = true;
+
+        if(!stockInfo.price || getError(stockInfo.price))
+            valid = false;
+        
+        if(!stockInfo.logo || getError(stockInfo.logo))
+            valid = false;
+        
+        if(!stockInfo.news || getError(stockInfo.news))
+            valid = false;
+
+        return valid;
     }
 }
 

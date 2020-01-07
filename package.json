@@ -4,14 +4,15 @@
   "description": "finance-watch-api",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lichobaron/finance-watch-api.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "https://github.com/lichobaron/",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/lichobaron/finance-watch-api/issues"
   },

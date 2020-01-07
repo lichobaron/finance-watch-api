@@ -10,7 +10,6 @@ module.exports.get = function get(url){
             });
         
             resp.on('end', () => {
-                console.log(data);
                 resolve(JSON.parse(data));
             });
       
