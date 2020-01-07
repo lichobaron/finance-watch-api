@@ -1,0 +1,1 @@
+module.exports.stockInfo = /\/stock-info\/([0-9a-z]+)/;
