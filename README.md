@@ -1,7 +1,7 @@
 # finance-watch-api
 
 ## Requirements
-  - Latest NodeJS version
+  - Latest version of NodeJS
 
 ## Run the program
   1. Clone the repository.
