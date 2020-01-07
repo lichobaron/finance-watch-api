@@ -10,9 +10,15 @@ module.exports.get = function get(url){
             });
         
             resp.on('end', () => {
-                resolve(JSON.parse(data));
+                let response;
+                try {
+                    response = JSON.parse(data);
+                } catch (error) {
+                    reject(error);
+                }
+                resolve(response);
             });
-      
+        
         }).on("error", (err) => {
             reject({ error: err.message });
         });
